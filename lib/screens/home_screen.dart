@@ -25,7 +25,8 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           PopupMenuButton(
             icon: const CircleAvatar(
-              backgroundImage: NetworkImage('https://via.placeholder.com/32'),
+              backgroundImage: NetworkImage(
+                  'https://hosterialoslagos.com/wp-content/uploads/2024/09/Logolagos.png'),
             ),
             itemBuilder: (BuildContext context) => [
               const PopupMenuItem(

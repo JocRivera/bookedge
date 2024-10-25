@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../screens/reservations_screen.dart';
+import '../../screens/rooms_cabins_screen.dart';
 
 class Sidebar extends StatelessWidget {
   const Sidebar({super.key});
@@ -9,15 +11,19 @@ class Sidebar extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: Text(
-              'Menu',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
+          const SizedBox(
+            height: 80, // Ajusta la altura según sea necesario
+            child: DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 73, 156, 178),
+              ),
+              padding: EdgeInsets.all(5.0),
+              child: Text(
+                'Menu',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24, // Reduce el tamaño de la fuente
+                ),
               ),
             ),
           ),
@@ -32,14 +38,20 @@ class Sidebar extends StatelessWidget {
             leading: const Icon(Icons.bed),
             title: const Text('Cabins & Rooms'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const RoomsCabinsScreen()));
             },
           ),
           ListTile(
             leading: const Icon(Icons.calendar_today),
             title: const Text('Reservations'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ReservationsScreen()));
             },
           ),
         ],

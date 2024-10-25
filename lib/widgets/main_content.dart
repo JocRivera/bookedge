@@ -1,3 +1,4 @@
+import 'package:bookedge/screens/rooms_cabins_screen.dart';
 import 'package:flutter/material.dart';
 import '../../screens/reservations_screen.dart';
 
@@ -29,7 +30,12 @@ class MainContent extends StatelessWidget {
                 context,
                 icon: Icons.bed,
                 label: 'Cabins & Rooms',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const RoomsCabinsScreen()));
+                },
               ),
               _buildMenuButton(
                 context,
