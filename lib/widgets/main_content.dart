@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../screens/reservations_screen.dart';
 
 class MainContent extends StatelessWidget {
   const MainContent({super.key});
@@ -34,7 +35,12 @@ class MainContent extends StatelessWidget {
                 context,
                 icon: Icons.calendar_today,
                 label: 'Reservations',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ReservationsScreen()));
+                },
               ),
             ],
           ),
